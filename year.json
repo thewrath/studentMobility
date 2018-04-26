@@ -1,0 +1,14 @@
+{
+	"id":1,
+	"studentId":1,
+	"NSUDepartment":"test",
+	"NSUProgram":"test",
+	"NSUGrade":"test",
+	"diploma":"test@gmail.com",
+	"recvOrgaRU":"test",
+	"recvOrgaFR":"test",
+	"fromYear":"year",
+	"toYear":"year",
+	"certificateTypeEdu":"edu",
+	"certificateTypePro":"edu"
+}
