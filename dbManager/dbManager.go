@@ -140,6 +140,8 @@ func RemoveStudent(student Student) error{
 	}
 	err := errors.New("Database not initialized.")
 	return err
+
+	//add something for remove years corresponding to this student 
 }
 
 //used to udpate student data in DBs  
@@ -151,12 +153,12 @@ func UpdateStudent(student Student) error{
 		checkErr(err, "Begin transaction error")	
 		//rq means sql request
 		//prepare request 
-		rq, err := db.Prepare("update ");  
+		rq, err := db.Prepare("update students set firstnameRU = ?, firstnameFR = ?, secondNameRU = ?, secondNameFR = ?, email = ?, department = ?, fromYear = ?, toYear = ? where id = ? ");  
 		//close request 
 		defer rq.Close()
 		//execute request 
 		checkErr(err, "preparation error")
-		_, err = rq.Exec(student.Id)
+		_, err = rq.Exec(student.FirstnameRU, student.FirstnameRU, student.SecondNameRU, student.SecondNameFR, student.Email, student.Department, student.FromYear, student.ToYear, student.Id)
 		checkErr(err, "Request  execution error")
 		//Commit transaction 
 		tx.Commit()

@@ -8,15 +8,15 @@ Student Mobility server :
 
 * to test put student Data : 
 
-	curl -s -vX  PUT -d @createStudent.json http://localhost:3000/putStudentData
+	`curl -s -vX  PUT -d @createStudent.json http://localhost:3000/putStudentData`
 
 * to test getStudent Data : 
 
-	curl -s -vX  GET -d @getStudent.json http://localhost:3000/getStudentData
+	`curl -s -vX  GET -d @getStudent.json http://localhost:3000/getStudentData`
 
 * to test removeStudentData : 
 
-	curl -s -vX  POST -d @removeStudent.json http://localhost:3000/removeStudentData
+	`curl -s -vX  POST -d @removeStudent.json http://localhost:3000/removeStudentData`
 
 You can find inside student.json and year.json how correctly form a json to store student data. 
 
